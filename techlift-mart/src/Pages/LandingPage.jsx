@@ -1,3 +1,4 @@
+import AboutUs from "../Components/AboutUs"
 import HeroSection from "../Components/HeroSection"
 import Navbar from "../Components/Navbar"
 
@@ -6,6 +7,7 @@ const LandingPage = () => {
     <div>
        <Navbar />
        <HeroSection />
+       <AboutUs />
     </div>
   )
 }

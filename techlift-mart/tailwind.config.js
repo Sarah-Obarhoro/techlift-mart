@@ -10,6 +10,8 @@ export default {
     fontFamily: {
       arizona: ["Arizonia", "cursive"],
       inter: ["Inter", "sans-serif"],
+      gabriela: ["Gabriela", "serif"],
+      redRose: ["Red Rose", "cursive"],
     },
     extend: {},
   },
