@@ -1,0 +1,55 @@
+.mb-faq .faq-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #151616;
+    /* border-bottom: 8px solid var(--black-color); */
+    height: 59.44px;
+    padding: 0 20px;
+    font-family: 'Inter';
+    font-size: 18px;
+    border-radius: 10px;
+}
+.mb-faq .faq-content {
+    background: #FFFFFF;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Netflix Sans';
+    font-size: 18px;
+}
+.dt-faq {
+    display: none;
+}
+
+@media (min-width: 760px) {
+    .mb-faq {
+        display: none;
+    }
+    .dt-faq {
+        display: block;
+        padding: 0 20px;
+    }
+    .dt-faq .faq-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #151616;
+        color: #FFFFFF;
+        height: 74.49px;
+        padding: 0 20px;
+        margin-bottom: 20px;
+        font-family: 'Netflix Sans';
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .dt-faq .faq-content {
+        background: #FFFFFF;
+        padding: 0 20px;
+        text-align: left;
+        font-family: 'Inter';
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid #F8F8F8;
+    }
+}
