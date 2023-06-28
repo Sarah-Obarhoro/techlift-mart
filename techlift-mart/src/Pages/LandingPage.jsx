@@ -1,14 +1,16 @@
+import { useState } from "react"
 import AboutUs from "../Components/AboutUs"
 import Contact from "../Components/Contact"
 import Faq from "../Components/Faq"
 import HeroSection from "../Components/HeroSection"
 import Navbar from "../Components/Navbar"
 import { faqs } from '../data/faqs'
+import Signup from "../Components/Signin"
 
 const LandingPage = () => {
   return (
     <div>
-       <Navbar />
+      <Navbar />
        <HeroSection />
        <AboutUs />
        <div style={{minHeight: '60vh'}} className="px-[150px] font-inter">

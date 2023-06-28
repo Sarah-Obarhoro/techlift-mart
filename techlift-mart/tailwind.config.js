@@ -6,6 +6,7 @@ export default {
       techliftBlue: "#033B5B",
       techliftBlack: "#151616",
       techliftWhite: "#FFFFFF",
+      techliftGray: "#555555",
     },
     fontFamily: {
       arizona: ["Arizonia", "cursive"],

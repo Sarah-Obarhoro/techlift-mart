@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import { BsCart3, BsPerson } from "react-icons/bs";
+import Signup from './Signin';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleOverlay = () => {
+    setIsOpen(!isOpen)
+  }
+
+
   return (
     <nav className="h-20 bg-techliftWhite px-4 py-3 flex justify-between">
       <div className=" pl-10">
@@ -30,7 +39,7 @@ const Navbar = () => {
           <span>|</span>
           <BsPerson className="w-6 h-6" />
           <li>
-            <a href="">Register or Sign In</a>
+            <a href="">Sign In</a>
           </li>
 
           <span>|</span>
@@ -39,6 +48,7 @@ const Navbar = () => {
             <a href="">Shop Now</a>
           </li>
         </ul>
+        {isOpen && <Signup onClose={toggleOverlay} />}
       </div>
     </nav>
   );
