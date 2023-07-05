@@ -1,0 +1,105 @@
+.products {
+    width: 100%;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+}
+
+.mobile__products {
+    width: 100%;
+}
+.desktop__products {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile__products {
+        display: none;
+    }
+    .desktop__products {
+        display: block;
+    }
+    .desktop__products header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        height: 64px;
+        background: #FFF;
+    }
+    .desktop__products .desktop__dropdown {
+        display: inline-block;
+    }
+    .desktop__dropdown .desktop__dropbtn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #151616;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .desktop__dropdown .desktop__categories {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .desktop__dropdown__content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+    .desktop__dropdown__content p {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .desktop__dropdown__content a:hover {
+        background-color: #f1f1f1;
+    }
+    .desktop__dropdown:hover .desktop__dropdown__content {
+        display: block;
+    }
+    .desktop__cart {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #151616;
+        padding: 14px 16px;
+        /* font-weight: bold; */
+    }
+    .swiper-pagination-bullet {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        opacity: 1;
+        height: 6px;
+        width: 6px;
+        transition: 0.2 all;
+    }
+    .swiper-pagination-bullet-active {
+        width: 25px;
+        height: 7px;
+        border-radius: 10px;
+    }
+    .swiper-pagination-bullets .swiper-pagination-horizontal {
+        bottom: 0;
+    }
+    /* .swiper {
+        padding-bottom: 30px;
+    } */
+}

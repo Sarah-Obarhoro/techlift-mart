@@ -1,27 +1,23 @@
+import Signin from "../Components/Signin"
 import { Link, useNavigate } from "react-router-dom"
-import { BiLogoFacebookCircle } from 'react-icons/bi' 
-import { FcGoogle } from 'react-icons/fc'
 
-import close from '../assets/close.svg'
-
-const Signin = ({ onClose }) => {
+const Login = () => {
     const navigate = useNavigate()
 
     const handleSubmit = () => {
         navigate('/products')
     }
 
-  return (
-    <div className="fixed top-0 right-0 h-full w-full flex font-inter">
-    <div className="flex-1 bg-techliftBlack opacity-80"></div>
-    <div className="w-2/5 bg-techliftWhite z-50">
+    return (
+        <div className="flex justify-center items-center bg-[#f7f7f7] min-h-full pt-[20px] pb-[60px]">
+                <div className="w-1/2 bg-techliftWhite z-50">
       <div className="bg-techliftBlue h-[83px] p-6 flex justify-between">
         <span>
             <h4 className="font-inter text-techliftWhite">Login</h4>
         </span>
-        <span>
+        {/* <span>
             <button onClick={onClose}><img src={close} alt='close'/></button>
-        </span>
+        </span> */}
       </div>
       <div className="pl-10 text-center mt-6 mr-[50px]">
         <h1 className="text-techliftBlue font-arizona text-2xl">Techlift</h1>
@@ -86,14 +82,11 @@ const Signin = ({ onClose }) => {
             </button>
             <span 
                 className="text-[#66696B] text-xs text-justify font-medium"
-            >Don't have an account? <Link to="signup">Sign up</Link></span>
+            >Don't have an account? <Link to="/signup">Sign up</Link></span>
         </div>
       </form>
     </div>
-  </div>
-  );
-};
-
-export default Signin
-
-
+        </div>
+    )
+}
+export default Login

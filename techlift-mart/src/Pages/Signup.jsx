@@ -1,6 +1,11 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Signup = () => {
+    const navigate = useNavigate()
+
+    const handleSubmit = () => {
+        navigate('/products')
+    }
     return (
         <div className="w-full flex justify-center items-center font-inter bg-[#F7F7F7] py-[60px] min-h-full">
             <div className="w-10/12 bg-techliftWhite pb-[100px]">
@@ -81,8 +86,9 @@ const Signup = () => {
                         <div className="w-full mt-12 text-center px-8">
                             <button 
                                 className="w-full rounded-xl h-[70px] outline-none border-none bg-techliftBlue text-base text-techliftWhite font-bold"
+                                onClick={handleSubmit}
                             >
-                                Sign in
+                                Sign up
                             </button>
                             <span 
                                 className="text-[#66696B] text-xs text-justify font-bold max-w-[464px]"
@@ -91,7 +97,7 @@ const Signup = () => {
                                 Privacy and Condition of Use.
                             </span>
                             <p className="mt-[40px] text-[#66696B] text-xs text-center font-medium">
-                                Already have an account? <Link className="font-bold" to="">Sign in</Link>
+                                Already have an account? <Link className="font-bold" to="/login">Sign in</Link>
                             </p>
                     </div>
                 </form>

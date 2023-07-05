@@ -39,7 +39,7 @@ const Navbar = () => {
           <span>|</span>
           <BsPerson className="w-6 h-6" />
           <li>
-            <a href="">Sign In</a>
+            <button onClick={toggleOverlay}>Sign In</button>
           </li>
 
           <span>|</span>

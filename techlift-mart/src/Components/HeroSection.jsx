@@ -7,7 +7,7 @@ import { BsGooglePlay } from "react-icons/bs";
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#F3F3F3] h-[120vh] flex">
+    <div className="bg-[#F3F3F3] h-[100vh] flex z-0">
       <div className="flex-1">
         <div className="relative top-56 left-10 text-center">
           <h1 className="text-techliftBlue font-inter text-5xl font-bold">
@@ -96,8 +96,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex-1 relative top-24">
-        <img src={heroImg} alt="Hero Image" style={{ height: "" }} />
+      <div className="flex-1 top-24">
+        <img src={heroImg} alt="Hero Image" style={{ height: "",width: "85%" }} className="z-0" />
       </div>
     </div>
   );

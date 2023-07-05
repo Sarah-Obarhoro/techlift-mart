@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './faq.css'
+import './styles/faq.css'
 import { TiArrowSortedDown } from 'react-icons/ti'
 import { TiArrowSortedUp } from 'react-icons/ti'
 

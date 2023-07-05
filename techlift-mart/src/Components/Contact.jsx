@@ -1,4 +1,4 @@
-import './contact.css'
+import './styles/contact.css'
 import { IoIosCall } from 'react-icons/io'
 import call from '../assets/call.svg'
 import email from '../assets/email.svg'
