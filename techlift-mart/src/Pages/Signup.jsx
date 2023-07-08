@@ -1,4 +1,6 @@
 import { Link, useNavigate } from "react-router-dom"
+import facebook from '../assets/facebook.svg'
+import google from '../assets/google.svg'
 
 const Signup = () => {
     const navigate = useNavigate()
@@ -17,9 +19,12 @@ const Signup = () => {
                         <button><img src={close} alt='close'/></button>
                     </span> */}
                 </div>
-                <div className="pl-10 text-center mt-6 mr-[50px]">
-                    <h1 className="text-techliftBlue font-arizona text-2xl">Techlift</h1>
-                    <h1 className="text-techliftBlue font-arizona text-2xl relative left-5">Mart</h1>
+                <div className="text-center mt-6 mr-[50px] pl-10">
+                    <h1 className="text-techliftBlue font-redRose text-2xl">Techlift</h1>
+
+                    <h1 className="text-techliftBlue font-redRose text-2xl relative left-5">
+                    Mart
+                    </h1>
                 </div>
                 <div className='text-center mt-[30px]'>
                     <p className='font-medium text-[16px] text-techliftBlack leading-[25px]'>
@@ -83,22 +88,40 @@ const Signup = () => {
                             />
                         </label>
                     </div>
-                        <div className="w-full mt-12 text-center px-8">
-                            <button 
-                                className="w-full rounded-xl h-[70px] outline-none border-none bg-techliftBlue text-base text-techliftWhite font-bold"
-                                onClick={handleSubmit}
-                            >
-                                Sign up
-                            </button>
-                            <span 
-                                className="text-[#66696B] text-xs text-justify font-bold max-w-[464px]"
-                            >
-                                By clicking “Create account”, you agree with Techlift Mart
-                                Privacy and Condition of Use.
+                    <div className="w-[98%] mt-10 flex flex-col justify-center items-center gap-6 px-8">
+                        <button 
+                            className="w-full rounded-xl h-[50px] outline-none border border-[#3E3E3E] text-sm text-techliftBlack font-bold"
+                        >
+                            <span className="flex justify-center items-center gap-2">
+                                <img src={facebook} alt="facebook's logo" />
+                                <>Sign with Facebook</>
                             </span>
-                            <p className="mt-[40px] text-[#66696B] text-xs text-center font-medium">
-                                Already have an account? <Link className="font-bold" to="/login">Sign in</Link>
-                            </p>
+                        </button>
+                        <button 
+                            className="w-full rounded-xl h-[50px] outline-none border border-[#3E3E3E] text-sm text-techliftBlack font-bold"
+                        >
+                            <span className="flex justify-center items-center gap-2">
+                                <img src={google} alt="google's logo" />
+                                <>Sign with Google</>
+                            </span>
+                        </button>
+                    </div>
+                    <div className="w-full mt-12 text-center px-8">
+                        <button 
+                            className="w-full rounded-xl h-[70px] outline-none border-none bg-techliftBlue text-base text-techliftWhite font-bold"
+                            onClick={handleSubmit}
+                        >
+                            Create Account
+                        </button>
+                        <span 
+                            className="text-[#66696B] text-xs text-justify font-bold max-w-[464px]"
+                        >
+                            By clicking “Create account”, you agree with Techlift Mart
+                            Privacy and Condition of Use.
+                        </span>
+                        <p className="mt-[40px] text-[#66696B] text-xs text-center font-medium">
+                            Already have an account? <Link className="font-bold" to="/login">Sign in</Link>
+                        </p>
                     </div>
                 </form>
             </div>

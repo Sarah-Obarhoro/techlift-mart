@@ -20,6 +20,9 @@ import printer from '../assets/printer.svg'
 import collections1 from '../assets/collections1.svg'
 import collections2 from '../assets/collections2.svg'
 import collections3 from '../assets/collections3.svg'
+import redmi from '../assets/redmi.svg'
+import galaxy from '../assets/galaxy.svg'
+import mouse from '../assets/mouse.svg'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -31,6 +34,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Keyboard, Pagination, Navigation } from 'swiper/modules';
+import { NavLink } from 'react-router-dom';
 
 
 const Products = () => {
@@ -75,25 +79,22 @@ const Products = () => {
                     <span className='desktop__dropdown'>
                         <div className='desktop__dropbtn'>Help <TiArrowSortedDown /></div>
                         <div className='desktop__dropdown__content'>
-                            <p>Contacts</p>
-                            <p>Help</p>
-                            <p>Help</p>
+                             <NavLink to=''>Order Cancellation</NavLink>
+                             <NavLink to=''>Return and Refunds</NavLink>
+                             <NavLink to=''>Payment</NavLink>
+                             <NavLink to=''>Custom Block</NavLink>
+                             <NavLink to=''>Late Delivery</NavLink>
                         </div>
                     </span>
                     <span className='desktop__dropdown'>
-                        <div className='desktop__dropbtn'>Account <TiArrowSortedDown /></div>
+                        <div className='desktop__dropbtn'>My Account <TiArrowSortedDown /></div>
                         <div className='desktop__dropdown__content'>
-                            <p>Account</p>
-                            <p>Acc</p>
-                            <p>egjekrj</p>
-                        </div>
-                    </span>
-                    <span className='desktop__dropdown'>
-                        <div className='desktop__dropbtn'>Help <TiArrowSortedDown /></div>
-                        <div className='desktop__dropdown__content'>
-                            <p>Contacts</p>
-                            <p>Help</p>
-                            <p>Help</p>
+                            <p>Hello James</p>
+                            <NavLink>Track my Order</NavLink>
+                            <NavLink>My Order</NavLink>
+                            <NavLink>My Wishlist</NavLink>
+                            <NavLink>My Wallet</NavLink>
+                            <NavLink className='bg-techliftBlue'>Logout</NavLink>
                         </div>
                     </span>
                     <span className='desktop__cart'>
@@ -104,16 +105,36 @@ const Products = () => {
                     <span className='desktop__dropdown'>
                             <div className='desktop__categories'><GiHamburgerMenu className='mr-3' /> All Categories <TiArrowSortedDown /></div>
                             <div className='desktop__dropdown__content'>
-                                <p>EN</p>
-                                <p>ES</p>
-                                <p>IT</p>
+                                <div className='flex justify-evenly items-center px-[16px] py-[12px]'>
+                                    <span className='text-base font-regular'>
+                                        <p className='font-semibold text-xl'>Laptops</p>
+                                        <NavLink>Mini Laptops and Netbook</NavLink>
+                                        <NavLink>Ultrabooks</NavLink>
+                                        <NavLink>Hybrid PCs</NavLink>
+                                        <NavLink>Macbooks</NavLink>
+                                    </span>
+                                    <span className='text-base font-regular'>
+                                        <p className='font-semibold text-xl'>Computer and Accessories</p>
+                                        <NavLink>Computer Peripherals</NavLink>
+                                        <NavLink>Bags, Cases, Covers and Sleeves</NavLink>
+                                        <NavLink>Laptops and Desktops Accessories</NavLink>
+                                        <NavLink>Storage Devices</NavLink>
+                                    </span>
+                                    <span className='text-base font-regular'>
+                                        <p className='font-semibold text-xl'>Desktops and Monitors</p>
+                                        <NavLink>UPs</NavLink>
+                                        <NavLink>CPUs</NavLink>
+                                        <NavLink>Servicers</NavLink>
+                                        <NavLink>Desktop Bundles</NavLink>
+                                    </span>
+                                </div>
                             </div>
                     </span>
-                    <span>Phone Accessories</span>
-                    <span>Computers and Accessories</span>
-                    <span>Smart Watches</span>
-                    <span>Cameras and Accessories</span>
-                    <span>Bluetooth Speakers</span>
+                     <span className='cursor-pointer'>Phone Accessories</span>
+                     <span className='cursor-pointer'>Computers and Accessories</span>
+                     <span className='cursor-pointer'>Smart Watches</span>
+                     <span className='cursor-pointer'>Cameras and Accessories</span>
+                     <span className='cursor-pointer'>Bluetooth Speakers</span>
                 </section>
                 <section className='px-[20px] mb-[40px]'>
                     <Slider />
@@ -215,8 +236,8 @@ const Products = () => {
                             </div>
                             <div className='w-[335px] h-[530px] shadow-xl p-10'>
                                 <b className='text-end'>-50%</b>
-                                <img src={headphone} alt='headphone'  className='pb-6' />
-                                <em className='font-bold'>Symphonize Blast Wireless Bluetooth Headphone</em>
+                                <img src={camera} alt='nikon camera'  className='pb-6 w-[228px] h-[222px]' />
+                                <em className='font-bold'>Nikon D800 - Medium Format Resolution in DSLR</em>
                                 <aside className='flex justify-between items-start  pt-6'>
                                     <div className='flex flex-col'>
                                         <b className='whitespace-nowrap'>₦2, 000</b>
@@ -250,8 +271,8 @@ const Products = () => {
                             </div>
                             <div className='w-[335px] h-[530px] shadow-xl p-10'>
                                 <b className='text-end'>-50%</b>
-                                <img src={headphone} alt='headphone'  className='pb-6' />
-                                <em className='font-bold'>Symphonize Blast Wireless Bluetooth Headphone</em>
+                                <img src={watch} alt='R17 smart bracelet'  className='pb-6 w-[238px] h-[279px]' />
+                                <em className='font-bold'>R17 Smart bracelet 2.5D color heart rate blood pressure</em>
                                 <aside className='flex justify-between items-start  pt-6'>
                                     <div className='flex flex-col'>
                                         <b className='whitespace-nowrap'>₦2, 000</b>
@@ -286,7 +307,7 @@ const Products = () => {
                         </span>
                     </div>
                 </section>
-                <section className='mt-[100px] px-[20px] flex flex-col justify-evenly items-center'>
+                <section id='best-sellers' className='mt-[100px] px-[20px] flex flex-col justify-evenly items-center'>
                     <span>
                         <h2 className='text-start text-2xl text-techliftBlack font-semibold'>Best Sellers</h2>
                         <hr className='my-4 w-[1513px]' />
@@ -307,7 +328,7 @@ const Products = () => {
                     >
                         <SwiperSlide>
                             <div className='flex flex-wrap items-center justify-evenly'>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
                                     <span>
                                         <img src={asus} alt='asus laptop' className='w-[165px] h-[168px]' />
                                     </span>
@@ -355,7 +376,103 @@ const Products = () => {
                                         </span>
                                     </span>
                                 </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
+                                    <span>
+                                        <img src={redmi} alt='XIAOMI Redmi A-2' className='w-[165px] h-[168px]' />
+                                    </span>
+                                    <span className='flex flex-col items-stretch justify-evenly'>
+                                        <span className='text-lg font-medium text-techliftBlack max-w-[270px]'>XIAOMI Redmi A2+ 6.52 Inches 2GB RAM 32GB</span>
+                                        <span className='mt-4 flex flex-row gap-4'>
+                                            <>₦102, 000</>
+                                            <><strike>₦106, 000</strike></>
+                                        </span>
+                                            <div className='flex mt-4 justify-start'>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <div 
+                                                    className='text-xs bg-blend-overlay'
+                                                    style={{
+                                                        borderRadius: '60px',
+                                                        padding: '5px',
+                                                        width: '42px',
+                                                        height: '28.67px',
+                                                        marginTop: '-5px',
+                                                        marginLeft: '15px',
+                                                        background: `linear-gradient(to right, #E82424 100%, #F18787 22%)`,
+                                                        opacity: '0.4'
+                                                    }}
+                                                >
+                                                    <b className='text-white font-bold'>-30%</b>
+                                                </div>
+                                            </div>
+                                        <span className='flex justify-between items-center'>
+                                            <button className='w-[102px] h-[42px] mb-2 rounded bg-techliftBlue text-techliftWhite mt-6'>Buy now</button>
+                                            <button className='w-[102px] h-[42px] rounded  border border-techliftGray bg-techliftWhite text-[#333030] mt-4'>Add to Cart</button>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
+                                    <span>
+                                        <img src={galaxy} alt='samsung galaxy tab' className='w-[165px] h-[168px]' />
+                                    </span>
+                                    <span className='flex flex-col items-stretch justify-evenly'>
+                                        <span className='text-lg font-medium text-techliftBlack max-w-[270px]'>Samsung Galaxy Tab A7 Lite 8.0" (2021, WiFi Only, No Sim)</span>
+                                        <span className='mt-4 flex flex-row gap-4'>
+                                            <>₦102, 000</>
+                                            <><strike>₦106, 000</strike></>
+                                        </span>
+                                            <div className='flex mt-4 justify-start'>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <span>
+                                                    <img src={star} alt='star' />
+                                                </span>
+                                                <div 
+                                                    className='text-xs bg-blend-overlay'
+                                                    style={{
+                                                        borderRadius: '60px',
+                                                        padding: '5px',
+                                                        width: '42px',
+                                                        height: '28.67px',
+                                                        marginTop: '-5px',
+                                                        marginLeft: '15px',
+                                                        background: `linear-gradient(to right, #E82424 100%, #F18787 22%)`,
+                                                        opacity: '0.4'
+                                                    }}
+                                                >
+                                                    <b className='text-white font-bold'>-30%</b>
+                                                </div>
+                                            </div>
+                                        <span className='flex justify-between items-center'>
+                                            <button className='w-[102px] h-[42px] mb-2 rounded bg-techliftBlue text-techliftWhite mt-6'>Buy now</button>
+                                            <button className='w-[102px] h-[42px] rounded  border border-techliftGray bg-techliftWhite text-[#333030] mt-4'>Add to Cart</button>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
                                     <span>
                                         <img src={asus} alt='asus laptop' className='w-[165px] h-[168px]' />
                                     </span>
@@ -403,12 +520,12 @@ const Products = () => {
                                         </span>
                                     </span>
                                 </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
                                     <span>
-                                        <img src={asus} alt='asus laptop' className='w-[165px] h-[168px]' />
+                                        <img src={watch} alt='series 8 2023 smart watch' className='w-[165px] h-[168px]' />
                                     </span>
                                     <span className='flex flex-col items-stretch justify-evenly'>
-                                        <span className='text-lg font-medium text-techliftBlack max-w-[270px]'>Asus Asus W202 Intel Celeron 11.6" 4GB RAM/128GB Win 10</span>
+                                        <span className='text-lg font-medium text-techliftBlack max-w-[270px]'>Series 8 2023 New Smart Watch Bluetooth Call Men</span>
                                         <span className='mt-4 flex flex-row gap-4'>
                                             <>₦102, 000</>
                                             <><strike>₦106, 000</strike></>
@@ -451,108 +568,12 @@ const Products = () => {
                                         </span>
                                     </span>
                                 </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
                                     <span>
-                                        <img src={asus} alt='asus laptop' className='w-[165px] h-[168px]' />
+                                        <img src={mouse} alt='wireless optical vertical mouse' className='w-[165px] h-[168px]' />
                                     </span>
                                     <span className='flex flex-col items-stretch justify-evenly'>
-                                        <span className='text-lg font-medium text-techliftBlack max-w-[270px]'>Asus Asus W202 Intel Celeron 11.6" 4GB RAM/128GB Win 10</span>
-                                        <span className='mt-4 flex flex-row gap-4'>
-                                            <>₦102, 000</>
-                                            <><strike>₦106, 000</strike></>
-                                        </span>
-                                            <div className='flex mt-4 justify-start'>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <div 
-                                                    className='text-xs bg-blend-overlay'
-                                                    style={{
-                                                        borderRadius: '60px',
-                                                        padding: '5px',
-                                                        width: '42px',
-                                                        height: '28.67px',
-                                                        marginTop: '-5px',
-                                                        marginLeft: '15px',
-                                                        background: `linear-gradient(to right, #E82424 100%, #F18787 22%)`,
-                                                        opacity: '0.4'
-                                                    }}
-                                                >
-                                                    <b className='text-white font-bold'>-30%</b>
-                                                </div>
-                                            </div>
-                                        <span className='flex justify-between items-center'>
-                                            <button className='w-[102px] h-[42px] mb-2 rounded bg-techliftBlue text-techliftWhite mt-6'>Buy now</button>
-                                            <button className='w-[102px] h-[42px] rounded  border border-techliftGray bg-techliftWhite text-[#333030] mt-4'>Add to Cart</button>
-                                        </span>
-                                    </span>
-                                </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
-                                    <span>
-                                        <img src={asus} alt='asus laptop' className='w-[165px] h-[168px]' />
-                                    </span>
-                                    <span className='flex flex-col items-stretch justify-evenly'>
-                                        <span className='text-lg font-medium text-techliftBlack max-w-[270px]'>Asus Asus W202 Intel Celeron 11.6" 4GB RAM/128GB Win 10</span>
-                                        <span className='mt-4 flex flex-row gap-4'>
-                                            <>₦102, 000</>
-                                            <><strike>₦106, 000</strike></>
-                                        </span>
-                                            <div className='flex mt-4 justify-start'>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <span>
-                                                    <img src={star} alt='star' />
-                                                </span>
-                                                <div 
-                                                    className='text-xs bg-blend-overlay'
-                                                    style={{
-                                                        borderRadius: '60px',
-                                                        padding: '5px',
-                                                        width: '42px',
-                                                        height: '28.67px',
-                                                        marginTop: '-5px',
-                                                        marginLeft: '15px',
-                                                        background: `linear-gradient(to right, #E82424 100%, #F18787 22%)`,
-                                                        opacity: '0.4'
-                                                    }}
-                                                >
-                                                    <b className='text-white font-bold'>-30%</b>
-                                                </div>
-                                            </div>
-                                        <span className='flex justify-between items-center'>
-                                            <button className='w-[102px] h-[42px] mb-2 rounded bg-techliftBlue text-techliftWhite mt-6'>Buy now</button>
-                                            <button className='w-[102px] h-[42px] rounded  border border-techliftGray bg-techliftWhite text-[#333030] mt-4'>Add to Cart</button>
-                                        </span>
-                                    </span>
-                                </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
-                                    <span>
-                                        <img src={asus} alt='asus laptop' className='w-[165px] h-[168px]' />
-                                    </span>
-                                    <span className='flex flex-col items-stretch justify-evenly'>
-                                        <span className='text-lg font-medium text-techliftBlack max-w-[270px]'>Asus Asus W202 Intel Celeron 11.6" 4GB RAM/128GB Win 10</span>
+                                        <span className='text-lg font-medium text-techliftBlack max-w-[270px]'>2.4G Wireless Optical Vertical Mouse 6 Keys Ergonomic</span>
                                         <span className='mt-4 flex flex-row gap-4'>
                                             <>₦102, 000</>
                                             <><strike>₦106, 000</strike></>
@@ -599,7 +620,7 @@ const Products = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className='flex flex-wrap items-center justify-evenly'>
-                            <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
+                            <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
                                     <span>
                                         <img src={asus} alt='asus laptop' className='w-[165px] h-[168px]' />
                                     </span>
@@ -647,7 +668,7 @@ const Products = () => {
                                         </span>
                                     </span>
                                 </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex flex-row justify-between items-center gap-x-10">
                                     <span>
                                         <img src={asus} alt='asus laptop' className='w-[165px] h-[168px]' />
                                     </span>
@@ -695,7 +716,7 @@ const Products = () => {
                                         </span>
                                     </span>
                                 </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex justify-evenly items-center">
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex justify-evenly items-center">
                                     <span>
                                         <img src={laptop} alt='asus laptop' className='w-[165px] h-[168px]' />
                                     </span>
@@ -733,7 +754,7 @@ const Products = () => {
                                         </span>
                                     </span>
                                 </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex justify-evenly items-center">
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex justify-evenly items-center">
                                     <span>
                                         <img src={laptop} alt='asus laptop' className='w-[165px] h-[168px]' />
                                     </span>
@@ -771,7 +792,7 @@ const Products = () => {
                                         </span>
                                     </span>
                                 </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex justify-evenly items-center">
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex justify-evenly items-center">
                                     <span>
                                         <img src={laptop} alt='asus laptop' className='w-[165px] h-[168px]' />
                                     </span>
@@ -809,7 +830,7 @@ const Products = () => {
                                         </span>
                                     </span>
                                 </div>
-                                <div className="w-[483px] h-[264px] m-4 shadow-xl rounded p-10  flex justify-evenly items-center">
+                                <div className="w-[460px] h-[264px] m-4 shadow-xl rounded p-10  flex justify-evenly items-center">
                                     <span>
                                         <img src={laptop} alt='asus laptop' className='w-[165px] h-[168px]' />
                                     </span>

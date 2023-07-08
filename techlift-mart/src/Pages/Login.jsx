@@ -1,5 +1,8 @@
 import Signin from "../Components/Signin"
 import { Link, useNavigate } from "react-router-dom"
+import facebook from '../assets/facebook.svg'
+import google from '../assets/google.svg'
+
 
 const Login = () => {
     const navigate = useNavigate()
@@ -19,9 +22,10 @@ const Login = () => {
             <button onClick={onClose}><img src={close} alt='close'/></button>
         </span> */}
       </div>
-      <div className="pl-10 text-center mt-6 mr-[50px]">
-        <h1 className="text-techliftBlue font-arizona text-2xl">Techlift</h1>
-        <h1 className="text-techliftBlue font-arizona text-2xl relative left-5">
+      <div className="text-center mt-6 mr-[50px] pl-10">
+        <h1 className="text-techliftBlue font-redRose text-2xl">Techlift</h1>
+
+        <h1 className="text-techliftBlue font-redRose text-2xl relative left-5">
           Mart
         </h1>
       </div>
@@ -65,12 +69,18 @@ const Login = () => {
             <button 
                 className="w-full rounded-xl h-[50px] outline-none border border-[#3E3E3E] text-sm text-techliftBlack font-bold"
             >
-                Sign in with Facebook
+                <span className="flex justify-center items-center gap-2">
+                    <img src={facebook} alt="facebook's logo" />
+                    <>Sign with Facebook</>
+                </span>
             </button>
             <button 
                 className="w-full rounded-xl h-[50px] outline-none border border-[#3E3E3E] text-sm text-techliftBlack font-bold"
             >
-                Sign with Google
+                <span className="flex justify-center items-center gap-2">
+                    <img src={google} alt="google's logo" />
+                    <>Sign with Google</>
+                </span>
             </button>
         </div>
         <div className="w-full mt-12 text-center">

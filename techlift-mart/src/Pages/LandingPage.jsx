@@ -9,7 +9,7 @@ import Signup from "../Components/Signin"
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Navbar />
        <HeroSection />
        <AboutUs />
