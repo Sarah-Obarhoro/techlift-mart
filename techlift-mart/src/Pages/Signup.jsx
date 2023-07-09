@@ -10,7 +10,7 @@ const Signup = () => {
     }
     return (
         <div className="w-full flex justify-center items-center font-inter bg-[#F7F7F7] py-[60px] min-h-full">
-            <div className="w-10/12 bg-techliftWhite pb-[100px]">
+            <div className="w-6/12 bg-techliftWhite pb-[100px]">
                 <div className="bg-techliftBlue h-[133px] p-12 flex justify-between">
                     <span className="">
                         <h4 className="font-inter text-techliftWhite font-bold">Create Account</h4>

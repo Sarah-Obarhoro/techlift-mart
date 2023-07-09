@@ -11,7 +11,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="h-20 bg-techliftWhite px-4 py-3 flex justify-between">
+    <nav className="h-20 bg-techliftWhite px-12 py-3 flex justify-between">
       <div className=" pl-10">
         <h1 className="text-techliftBlue font-redRose text-2xl">Techlift</h1>
 
@@ -20,7 +20,7 @@ const Navbar = () => {
         </h1>
       </div>
 
-      <div className="font-inter text-xl text-techliftBlack py-4">
+      <div className="font-inter font-medium text-lg text-techliftBlack py-4">
         <ul className="flex space-x-10 mr-56">
           <li>
             <a href="">About Us</a>
@@ -34,7 +34,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="font-inter text-xl text-techliftBlack py-4">
+      <div className="font-inter font-medium text-lg text-techliftBlack py-4">
         <ul className="flex space-x-10">
           <span>|</span>
           <BsPerson className="w-6 h-6" />
